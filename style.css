@@ -1,0 +1,788 @@
+/* Move down content because we have a fixed navbar that is 50px tall. */
+body {
+    padding-top: 50px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: #efefef;
+}
+
+/* Adjust body when menu is open. */
+body.slide-active {
+    overflow-x: hidden;
+    padding-top: 0;
+}
+
+body.slide-active .navbar {
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {
+    float: none;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+/* First child of #page-content so it doesn't shift around. */
+.no-margin-top {
+    margin-top: 0 !important
+}
+
+/* Wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding. */
+#page-content {
+    position: relative;
+    padding-top: 0;
+    left: 0;
+}
+
+#page-content.slide-active {
+    padding-top: 0;
+}
+
+/* Put toggle bars on the left :: not using button. */
+#slide-nav .navbar-toggle {
+    cursor: pointer;
+    position: relative;
+    line-height: 0;
+    margin: 0;
+    width: 30px;
+    height: 40px;
+    padding: 5px 0 0 0;
+    border: 0;
+    background: transparent;
+}
+
+/* Icon bar prettyup - optional. */
+#slide-nav .navbar-toggle > .icon-bar {
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin: 5px 0 0 0;
+}
+
+#slide-nav .navbar-toggle.slide-active .icon-bar {
+    background: orange;
+}
+
+.navbar-header {
+    position: relative;
+}
+
+/* Un fix the navbar when active so that all the menu items are accessible. */
+.navbar.navbar-fixed-top.slide-active {
+    position: relative;
+}
+
+.nav>li>a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nodejs-online-label {
+    display: none;
+}
+
+.nodejs-pm-label {
+    display: none;
+}
+
+.navbar-nav.nodejs-pm span.badge {
+    min-width: 10px;
+    padding: 3px 5px;
+    font-size: 9px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    vertical-align: top;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #999;
+    border-radius: 10px;
+}
+
+.featurebox.carousel .carousel-inner {
+    height: auto;
+}
+
+/* Screw writing importants and shit, just stick it in max width since these classes are not shared between sizes. */
+@media (max-width: 767px) {
+    .nodejs-online-label {
+        display: initial;
+    }
+
+    .nodejs-pm-label {
+        display: initial;
+    }
+
+    #slide-nav .container {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 100%;
+    }
+
+    #slide-nav .navbar-header {
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    #slide-nav .navbar.slide-active {
+        position: absolute;
+        width: 80%;
+        top: -1px;
+        z-index: 1000;
+    }
+
+    #slide-nav #slidemenu {
+        left: -100%;
+        width: 80%;
+        min-width: 0;
+        position: absolute;
+        padding-left: 0;
+        z-index: 2;
+        top: 0;
+        margin: 0;
+
+        overflow-y: auto;
+
+        background: rgb(40, 53, 58);
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(top, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(40, 53, 58, 1)), color-stop(100%, rgba(46, 74, 85, 1)));
+        background: -webkit-linear-gradient(top, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%);
+        background: -o-linear-gradient(top, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%);
+        background: -ms-linear-gradient(top, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%);
+        background: linear-gradient(to bottom, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#28353a', endColorstr='#2e4a55', GradientType=0);
+    }
+
+    #slide-nav #slidemenu label,
+    #slide-nav #slidemenu p {
+        color: #ffffff;
+    }
+
+    #slide-nav #slidemenu .navbar-nav {
+        min-width: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+        min-width: 0;
+        width: 80%;
+        white-space: normal;
+    }
+
+    #slide-nav {
+        border-top: 0;
+    }
+
+    #slide-nav.navbar-inverse #slidemenu {
+        background: #333;
+    }
+
+    /* This is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls. */
+    #navbar-height-col {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        bottom: 0;
+        width: 80%;
+        left: -80%;
+        background: #f7f7f7;
+    }
+
+    #navbar-height-col.inverse {
+        background: #333;
+        z-index: 1;
+        border: 0;
+    }
+
+    #slide-nav .navbar-form {
+        width: 100%;
+        margin: 8px 0;
+        text-align: center;
+        overflow: hidden;
+        /* Fast clearfixer. */
+    }
+
+    #slide-nav .navbar-form .form-control {
+        text-align: center;
+    }
+
+    #slide-nav .navbar-form .btn {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar.navbar-fixed-top.slide-active {
+        position: fixed;
+    }
+
+    .navbar-header {
+        left: 0 !important;
+    }
+}
+
+ul.page-nav, ol.page-nav {
+    padding-left: 25px;
+}
+
+.main-container {
+    padding-bottom: 40px;
+}
+
+.home-main-container {
+    display: none !important;
+}
+
+#content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #ffffff;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#content h2 {
+    margin-top: 0;
+}
+
+#sidebar {
+    margin-top: 20px;
+}
+
+.alert {
+    margin-top: 20px
+}
+
+blockquote {
+    color: #2a6496;
+    font-size: 12px;
+    border-left: 5px solid #ccc;
+}
+
+#social-buttons {
+    padding-top: 15px;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+#social-buttons .fb_iframe_widget {
+    line-height: 10px;
+}
+
+/* Make posted content images responsive too */
+.bbcode-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Sign in Page */
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox {
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Page Sections */
+.section, .section-colored {
+    padding: 50px 0;
+}
+
+.section-colored {
+    background-color: #e1e1e1;
+}
+
+.img-home-portfolio, .img-customer, .portfolio-item {
+    margin-bottom: 30px;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.featurebox.carousel {
+    min-height: 300px;
+}
+
+.featurebox.carousel .slide0 {
+    background-image: url('images/bg.jpg');
+}
+
+.featurebox.carousel .slide1,
+.featurebox.carousel .slide2,
+.featurebox.carousel .slide3 {
+    background-image: url('images/bg_2.jpg');
+}
+
+/* Since positioning the image, we need to help out the caption */
+.featurebox .carousel-caption {
+    z-index: 10;
+    top: 0;
+}
+
+.featurebox .carousel-caption h2 {
+    font-size: 72px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, .6);
+}
+
+.featurebox .carousel-caption h4 {
+    font-size: 20px;
+}
+
+/* Declare heights because of positioning of img element */
+.featurebox.carousel .item {
+    min-height: 300px;
+}
+
+.featurebox-item-image.pull-left, .featurebox-item-image.pull-right {
+    margin-top: 25px;
+}
+
+.featurebox-item-image.pull-left img, .featurebox-item-image.pull-right img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featurebox-item-text {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    font-size: 18px;
+}
+
+.featurebox-item-text h2 {
+    font-size: 26px;
+}
+
+img.featurebox {
+    border-radius: 5px
+}
+
+.xurl-social-icons a {
+    color: inherit;
+    text-decoration: none;
+    opacity: .7;
+    padding-left: 15px;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+
+.xurl-social-icons a:hover {
+    opacity: 1;
+}
+
+.btn-featurebox, .btn-cpage {
+    margin-top: 10px
+}
+
+.tab-pane {
+    padding-top: 15px
+}
+
+.slide {
+    background: rgb(39, 125, 162); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI3N2RhMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzM2E1ZDUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, rgba(39, 125, 162, 1) 0%, rgba(51, 165, 213, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(39, 125, 162, 1)), color-stop(100%, rgba(51, 165, 213, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(39, 125, 162, 1) 0%, rgba(51, 165, 213, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(39, 125, 162, 1) 0%, rgba(51, 165, 213, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(39, 125, 162, 1) 0%, rgba(51, 165, 213, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(39, 125, 162, 1) 0%, rgba(51, 165, 213, 1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#277da2', endColorstr='#33a5d5', GradientType=0); /* IE6-8 */
+}
+
+.navbar-e107hungary {
+    background: rgb(40, 53, 58); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4MzUzYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyZTRhNTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(40, 53, 58, 1)), color-stop(100%, rgba(46, 74, 85, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(40, 53, 58, 1) 0%, rgba(46, 74, 85, 1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#28353a', endColorstr='#2e4a55', GradientType=0); /* IE6-8 */
+    border-color: #080808;
+}
+
+.navbar-e107hungary .navbar-nav > .open > a,
+.navbar-e107hungary .navbar-nav > .active > a {
+    background-color: #28353a;
+}
+
+.navbar-e107hungary .navbar-brand,
+.navbar-e107hungary .navbar-nav > li > a {
+    text-shadow: none;
+}
+
+/***** Az oldal neve (sitename) ***********************************************/
+.navbar-e107hungary .navbar-brand {
+    color: #77BEDC;
+    padding: 10px;
+}
+
+.navbar-e107hungary .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+    color: #fff;
+    background-color: transparent;
+}
+
+/***** A navigációs sávban megjelenő szöveg ***********************************/
+.navbar-e107hungary .navbar-text {
+    color: #77BEDC;
+}
+
+.navbar-e107hungary .navbar-nav > li > a {
+    color: #b8cbd3;
+}
+
+.navbar-e107hungary .navbar-nav > li > a:hover {
+    color: #fff;
+    background-color: #28353a;
+}
+
+.navbar-e107hungary .navbar-nav > li > a:focus {
+    color: #b8cbd3;
+    background-color: #28353a;
+}
+
+.navbar-e107hungary .navbar-nav > .active > a,
+.navbar-e107hungary .navbar-nav > .active > a:hover,
+.navbar-e107hungary .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #28353a;
+}
+
+.navbar-e107hungary .navbar-nav > .disabled > a,
+.navbar-e107hungary .navbar-nav > .disabled > a:hover,
+.navbar-e107hungary .navbar-nav > .disabled > a:focus {
+    color: #444;
+    background-color: transparent;
+}
+
+/***** A navigációs sávban megjelenő link *************************************/
+.navbar-e107hungary .navbar-link {
+    color: #77BEDC;
+}
+
+.navbar-e107hungary .navbar-link:hover {
+    color: #fff;
+}
+
+.navbar-e107hungary .btn-link {
+    color: #77BEDC;
+}
+
+.navbar-e107hungary .btn-link:hover,
+.navbar-e107hungary .btn-link:focus {
+    color: #fff;
+}
+
+.navbar-e107hungary .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-e107hungary .btn-link:hover,
+.navbar-e107hungary .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-e107hungary .btn-link:focus {
+    color: #444;
+}
+
+.navbar-e107hungary .navbar-toggle {
+    border-color: #333;
+}
+
+.navbar-e107hungary .navbar-toggle:hover,
+.navbar-e107hungary .navbar-toggle:focus {
+    background-color: #333;
+}
+
+.navbar-e107hungary .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-e107hungary .navbar-collapse,
+.navbar-e107hungary .navbar-form {
+    border-color: #101010;
+}
+
+.navbar-e107hungary .navbar-nav > .open > a,
+.navbar-e107hungary .navbar-nav > .open > a:hover,
+.navbar-e107hungary .navbar-nav > .open > a:focus {
+    color: #000;
+    background-color: #fff;
+}
+
+.news-item-container {
+    margin-top: 20px;
+}
+
+.forum-viewtopic-post .col-md-2.span2.left small {
+    display: block;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.forum-viewtopic-post .col-md-2.span2.left small span {
+	display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content nav {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .news-item-container .col-md-9 {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > .dropdown-header {
+        border-color: #080808;
+    }
+
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu .divider {
+        background-color: #080808;
+    }
+
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > li > a {
+        color: #9d9d9d;
+    }
+
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #fff;
+        background-color: transparent;
+    }
+
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #fff;
+        background-color: #080808;
+    }
+
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-e107hungary .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #444;
+        background-color: transparent;
+    }
+}
+
+.dropdown-menu {
+    border: none !important;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.176) !important
+}
+
+/*.dropdown:hover .dropdown-menu                                                  { display: block; }*/
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.navbar-brand>img {
+    display: inline-block;
+}
+
+.nodejs-pm {
+    margin-right: 1px !important;
+}
+
+.nodejs-online-menu-dropdown {
+    margin-right: 1px !important;
+}
+
+/* CUSTOM Responsive Styles */
+/* Extra small devices Phones (<768px)  .col-xs */
+@media all and (max-width: 767px) {
+    .featurebox .carousel-indicators {
+        top: 10px;
+    }
+
+    .featurebox-item-image.pull-left, .featurebox-item-image.pull-right {
+        margin-top: 30px;
+    }
+
+    .featurebox .carousel-caption h2 {
+        font-size: 28px;
+    }
+
+    .featurebox .carousel-caption h4 {
+        font-size: 16px;
+    }
+
+    .featurebox-item-text {
+        font-size: 12px;
+    }
+
+    .featurebox-item-text h2 {
+        font-size: 20px;
+    }
+
+    .featurebox-item-image.pull-left img, .featurebox-item-image.pull-right img {
+        max-width: 100px;
+    }
+}
+
+/* Small devices Tablets .col-sm */
+@media all and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Medium devices Desktops (≥992px)  .col-md */
+@media all and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Large devices (large desktops, 1200px and up).col-lg  */
+@media all and (min-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+    .navbar-container {
+        width: 100%;
+    }
+}
+
+.padding-50 {
+    padding: 50px 0 50px 0;
+}
+
+.padding-25 {
+    padding-bottom: 25px;
+}
+
+.bg-1 {
+    color: #fff;
+    margin-top: 25px;
+    background: #28353A;
+}
+
+.color-1 {
+    color: #89B5C6;
+}
+
+.color-1 a {
+    color: #89B5C6;
+    font-size: 12px;
+    padding: 5px 15px 5px 15px;
+    border: 1px #5D7B86 solid;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #212121;
+    color: #504F4F;
+    padding: 40px 0 20px 0;
+}
+
+footer .last-row {
+    margin-top: 35px;
+}
+
+footer .last-row-links {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+img.news-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.panel > .panel-body + .table, .panel > .panel-body + .table-responsive {
+    border-top: none;
+}
+
+/* COMMENT */
+
+.comment-row .thumbnail {
+    padding: 0px;
+}
+
+.comment-row .panel {
+    position: relative;
+}
+
+.comment-row .panel > .panel-heading:after,
+.comment-row .panel > .panel-heading:before {
+    position: absolute;
+    top: 11px;
+    left: -16px;
+    right: 100%;
+    width: 0;
+    height: 0;
+    display: block;
+    content: " ";
+    border-color: transparent;
+    border-style: solid solid outset;
+    pointer-events: none;
+}
+
+.comment-row .panel > .panel-heading:after {
+    border-width: 7px;
+    border-right-color: #f7f7f7;
+    margin-top: 1px;
+    margin-left: 2px;
+}
+
+.comment-row .panel > .panel-heading:before {
+    border-right-color: #ddd;
+    border-width: 8px;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+}

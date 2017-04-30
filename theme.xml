@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Theme name="e107hungary" version="1.0" date="2015-02-22" compatibility="2.0">
+    <author name="e107 Inc - e107 Hungary" email="info@e107hungary.org" url="http://e107hungary.org/"/>
+    <summary>e107hungary bootstrap e107 theme</summary>
+    <description>Az e107 Magyarország első v2-es bootstrap témája</description>
+    <category>generic</category>
+    <plugins>
+        <plugin name='featurebox' url='core'/>
+        <plugin name='gallery' url='core'/>
+    </plugins>
+    <keywords>
+        <word>bootstrap</word>
+        <word>clean</word>
+    </keywords>
+    <screenshots>
+        <image>preview_frontend.png</image>
+    </screenshots>
+    <stylesheets>
+        <css file="style.css" name="Default"  />
+    </stylesheets>
+    <layouts>
+        <layout name='home' title='(home)' default='false'>
+            <custompages>FRONTPAGE</custompages>
+        </layout>
+        <layout name='full' title='(full-width)'/>
+        <layout name='sidebar_right' title='(sidebar-right)' default='true'>
+            <custompages>/hirek</custompages>
+        </layout>
+        <layout name='sidebar_right_other' title='(sidebar-right-other)' default='true'>
+            <custompages>/chatbox</custompages>
+            <custompages>/oldalak/hol-kezdjem</custompages>
+        </layout>
+        <layout name='sidebar_left' title='(sidebar-left)' default='true'>
+            <custompages>/page/fejlesztoi-kezikonyv</custompages>
+        </layout>
+        <layout name='contact' title='(contact)' default='true'>
+            <custompages>contact.php</custompages>
+        </layout>
+        <layout name='user_profile' title='(user-profile)' default='true'>
+            <custompages>/felhasznalok</custompages>
+        </layout>
+        <layout name='news_item' title='(news-item)' default='true'>
+            <custompages>/hirek/</custompages>
+        </layout>
+        <layout name='notifications' title='(notifications)' default='true'>
+            <custompages>/notifications</custompages>
+        </layout>
+    </layouts>
+</e107Theme>
