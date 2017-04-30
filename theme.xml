@@ -15,6 +15,13 @@
     <screenshots>
         <image>preview_frontend.png</image>
     </screenshots>
+    <libraries>
+        <library name="bootstrap" scope="all"/>
+        <library name="fontawesome" scope="all"/>
+        <library name="animate.css" scope="all"/>
+        <library name="jquery.appear" scope="all"/>
+        <library name="code-prettify" scope="all"/>
+    </libraries>
     <stylesheets>
         <css file="style.css" name="Default"  />
     </stylesheets>

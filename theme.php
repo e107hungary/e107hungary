@@ -12,27 +12,16 @@ define('FONTAWESOME', 4);
 // Define view-port meta tag.
 define('VIEWPORT', 'width=device-width, initial-scale=1.0');
 
-// Bootstrap CDN.
-e107::js("footer", "https://cdn.jsdelivr.net/bootstrap/3.3.7/js/bootstrap.min.js", 'jquery', 2);
-e107::css('url', 'https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css');
-
 // Fontello.
+// FIXME use library manager instead?
 e107::css('social', 'css/fontello.css');
 
-// Font-Awesome CDN.
-e107::css('url', 'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css');
-
 // Activate bootstrap tooltips.
+// FIXME is this really needed?
 e107::js("footer-inline", "$('.e-tip').tooltip({container: 'body'})");
 
-// Animate.css and Appear JS.
-e107::css("theme", "css/animate.css");
-e107::js("footer", "{e_THEME}e107hungary/vendor/jquery.appear/jquery.appear.js", 'jquery', 2);
+// Theme main js file.
 e107::js("footer", "{e_THEME}e107hungary/js/e107hungary.js", 'jquery', 2);
-
-// Syntax-highlighting with Google Code Prettify.
-e107::css("theme", "vendor/google.code.prettify/prettify.css");
-e107::js("footer", "{e_THEME}e107hungary/vendor/google.code.prettify/prettify.js", 'jquery', 2);
 
 
 define('OTHERNEWS_COLS', false); // no tables, only divs.
