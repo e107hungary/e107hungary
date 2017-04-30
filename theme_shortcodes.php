@@ -162,6 +162,8 @@ class theme_shortcodes extends e_shortcode
 
 	/**
 	 * Shortcode to render content with GitHub releases.
+     *
+     * FIXME lan
 	 */
 	function sc_e107_downloads()
 	{
