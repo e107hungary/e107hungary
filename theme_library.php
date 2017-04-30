@@ -23,13 +23,13 @@ class theme_library {
       'version'      => '2013-03-04',
       'files'        => array(
         'js'  => array(
-          'js/prettify.js' => array(
+          'prettify.js' => array(
             'zone' => 2,
             'type' => 'url',
           ),
         ),
         'css' => array(
-          'css/prettify.css' => array(
+          'prettify.css' => array(
             'zone' => 2,
           ),
         ),
