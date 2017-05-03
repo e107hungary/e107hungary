@@ -34,16 +34,16 @@ var e107 = e107 || {'settings': {}, 'behaviors': {}};
 							$this.css('animation-delay', delay + 'ms');
 						}
 
-						$this.addClass($this.attr('data-appear-animation'));
-
 						setTimeout(function ()
 						{
+							$this.addClass($this.attr('data-appear-animation'));
 							$this.addClass('appear-animation-visible');
 						}, delay);
 					}, {accX: 0, accY: 0, one: false});
 				}
 				else
 				{
+					$this.addClass($this.attr('data-appear-animation'));
 					$this.addClass('appear-animation-visible');
 				}
 			});

@@ -38,16 +38,11 @@ class theme_library {
 
     // jQuery Appear.
     $libraries['jquery.appear'] = array(
-      'name'              => 'jQuery Appear',
-      'vendor_url'        => 'https://github.com/morr/jquery.appear',
-      'download_url'      => 'https://github.com/morr/jquery.appear/archive/0.3.6.zip',
-      'version_arguments' => array(
-        'file'    => 'package.json',
-        // "version": "0.3.5"
-        'pattern' => '/"(\d\.\d+\.\d+)"/',
-        'lines'   => 15,
-      ),
-      'files'             => array(
+      'name'         => 'jQuery Appear',
+      'vendor_url'   => 'https://github.com/bas2k/jquery.appear/',
+      'download_url' => 'https://github.com/bas2k/jquery.appear/archive/v0.1.zip',
+      'version'      => '0.1',
+      'files'        => array(
         'js' => array(
           'jquery.appear.js' => array(
             'zone' => 2,

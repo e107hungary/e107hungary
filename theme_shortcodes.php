@@ -219,9 +219,9 @@ class theme_shortcodes extends e_shortcode
 			$html .= '</ul>';
 		}
 
-		$html .= '<h5><strong>e107 v2 nyelvi csomagok:</strong></h5>';
+		$html .= '<h5><strong>e107 v2 nyelvi csomag:</strong></h5>';
 		$html .= '<ul>';
-		$html .= '<li><a href="https://github.com/e107inc/e107-v2.x-Language-Packs" target="_blank">e107inc / e107-v2.x-Language-Packs</a></li>';
+		$html .= '<li><a href="https://github.com/e107translations/Hungarian" target="_blank">e107translations / Hungarian</a></li>';
 		$html .= '</ul>';
 
 		return $html;
