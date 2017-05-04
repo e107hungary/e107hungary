@@ -4,6 +4,7 @@ body {
     padding-bottom: 0;
     margin-bottom: 0;
     background: #efefef;
+    overflow-x: hidden;
 }
 
 /* Adjust body when menu is open. */
