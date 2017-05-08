@@ -216,10 +216,10 @@ $LAYOUT['home'] = '
     <div class="container">
         <ul class="list-inline">
             <li>
-                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=e107inc&amp;repo=e107&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" width="100px" frameborder="0" height="20px"></iframe>
+                <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=e107inc&amp;repo=e107&amp;type=watch&amp;count=true" allowtransparency="true" scrolling="0" width="100px" frameborder="0" height="20px"></iframe>
             </li>
             <li>
-                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=e107inc&amp;repo=e107&amp;type=fork&amp;count=true" allowtransparency="true" scrolling="0" width="102px" frameborder="0" height="20px"></iframe>
+                <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=e107inc&amp;repo=e107&amp;type=fork&amp;count=true" allowtransparency="true" scrolling="0" width="102px" frameborder="0" height="20px"></iframe>
             </li>
             <li>
                 <div class="fb-like" data-href="https://www.facebook.com/e107hungary" data-width="180" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
